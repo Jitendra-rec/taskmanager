@@ -1,0 +1,106 @@
+/* General styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Container for the columns */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equal-width columns */
+  width: 175%; /* Full width of the container */
+  gap: 10px;
+}
+
+/* Individual column styling */
+.column {
+  background: #65a2d4;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center; /* Center-align content inside columns */
+}
+
+/* Input, textarea, and button styling in the add-task and filter sections */
+.add-task input,
+.add-task textarea,
+.add-task select,
+.filters input,
+.filters select,
+button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 3px;
+}
+
+/* Task item styling */
+.task-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.task-item h4 {
+  margin: 0;
+}
+
+/* Priority label styling */
+.priority {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.priority.Low {
+  color: #28a745;
+}
+
+.priority.Medium {
+  color: #ffc107;
+}
+
+.priority.High {
+  color: #dc3545;
+}
+
+/* Button styling in task actions */
+.task-actions {
+  display: flex; /* Arrange buttons in a row */
+  gap: 5px; /* Add some space between buttons */
+}
+
+.task-actions button {
+  margin-right: 0; /* Remove individual button margin */
+}
+
+
+/* Responsive adjustments */
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr); /* Four columns, each 25% */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr; /* Single column for small screens */
+  }
+}
