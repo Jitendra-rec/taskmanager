@@ -25,4 +25,4 @@ npm start
 
 
 
-![Alt text](public/output.png)
+![Alt text](public/image.png)
